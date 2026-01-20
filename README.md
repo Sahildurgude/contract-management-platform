@@ -182,14 +182,21 @@ POST /contracts/{id}/transition — Perform lifecycle transition
 🛠 Setup Instructions
 Backend
 cd backend
+
 python -m venv venv
+
 venv\Scripts\activate   # Windows
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
+
 
 ## Frontend Setup
 cd frontend
+
 npm install
+
 npm run dev
 
 
