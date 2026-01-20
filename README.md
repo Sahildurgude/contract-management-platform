@@ -181,6 +181,7 @@ POST /contracts/{id}/transition — Perform lifecycle transition
 
 🛠 Setup Instructions
 Backend
+
 cd backend
 
 python -m venv venv
