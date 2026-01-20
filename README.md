@@ -3,7 +3,8 @@ Contract Management Platform
 A full-stack Contract Management Platform built to demonstrate backend-first system design, strict lifecycle enforcement, and clean API-driven workflows.
 
 The primary focus of this project is correctness, state control, and workflow enforcement, rather than visual UI polish.
-“This application is intended to be run locally. Deployment was not required as part of the assignment.”
+
+This application is intended to be run locally. Deployment was not required as part of the assignment.
 
 🚀 Features
 1. Blueprint Management
