@@ -4,14 +4,27 @@ A full-stack Contract Management Platform built to demonstrate backend-first sys
 
 The primary focus of this project is correctness, state control, and workflow enforcement, rather than visual UI polish.
 
-This application is intended to be run locally. Deployment was not required as part of the assignment.
+This application is fully deployed to demonstrate end-to-end full-stack development, cloud deployment, and frontend–backend integration.
+
+🔗 Live Deployment
+
+Frontend (Vercel):
+https://contract-management-platform-three.vercel.app
+
+Backend API (Render):
+https://contract-management-platform-h7fb.onrender.com
+
+API Health Check:
+https://contract-management-platform-h7fb.onrender.com/health
+
+⚠️ Note: The backend is hosted on Render’s free tier, so the first request may take ~20–30 seconds due to cold start.
 
 🚀 Features
 1. Blueprint Management
 
-Blueprints act as reusable contract templates
+Blueprints act as reusable contract templates.
 
-Each blueprint can contain configurable fields
+Each blueprint contains configurable fields
 
 Supported field types:
 
@@ -82,15 +95,15 @@ Pending
 Signed
 
 🏗 Architecture Overview
-Frontend (React + TypeScript)
-   |
-   | REST APIs
-   v
-Backend (FastAPI)
-   |
-   | SQLAlchemy ORM
-   v
-SQLite Database (contracts.db)
+Frontend (React + TypeScript, Vite, Vercel)
+        |
+        | REST APIs
+        v
+Backend (FastAPI, Render)
+        |
+        | SQLAlchemy ORM
+        v
+SQLite Database
 
 ⚙️ Tech Stack
 Backend
@@ -103,7 +116,7 @@ SQLAlchemy ORM
 
 SQLite
 
-Pydantic for validation
+Pydantic (validation)
 
 Frontend
 
@@ -179,35 +192,19 @@ GET /contracts?group=active|pending|signed — Grouped listing
 
 POST /contracts/{id}/transition — Perform lifecycle transition
 
-🛠 Setup Instructions
+🛠 Local Development Setup (Optional)
 Backend
-
 cd backend
-
 python -m venv venv
-
 venv\Scripts\activate   # Windows
-
 pip install -r requirements.txt
-
 uvicorn app.main:app --reload
 
 
-## Frontend Setup
-cd frontend
-
-npm install
-
-npm run dev
-
-
 Backend runs at:
-
 http://127.0.0.1:8000
 
-
-Swagger API documentation:
-
+Swagger docs:
 http://127.0.0.1:8000/docs
 
 Frontend
@@ -217,18 +214,17 @@ npm run dev
 
 
 Frontend runs at:
-
 http://localhost:5173
 
 🧠 Assumptions & Trade-offs
 
-Authentication is intentionally omitted
+Authentication intentionally omitted
 
-SQLite is used for fast local setup and simplicity
+SQLite used for simplicity and fast setup
 
 UI prioritizes clarity over visual polish
 
-No background jobs or async processing implemented
+No background jobs or async workers
 
 Database starts empty; data is created via application workflows
 
@@ -238,7 +234,7 @@ Role-based access control
 
 Contract value editing UI
 
-Lifecycle timeline view
+Lifecycle timeline visualization
 
 Audit logs
 
@@ -257,6 +253,8 @@ Lifecycle enforcement ✔
 Dashboard & grouping ✔
 
 Frontend–backend integration ✔
+
+Cloud deployment ✔
 
 Documentation ✔
 
